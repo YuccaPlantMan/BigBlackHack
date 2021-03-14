@@ -1,0 +1,16 @@
+[
+{
+  "modid": "bbh",
+  "name": "BigBlackHack",
+  "description": "1.12.2 anarchy utility mod",
+  "version": "${0.0.1}",
+  "mcversion": "${1.12.2}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ryseiwnl, YuccaPlantMan"],
+  "credits": "Sweeties",
+  "logoFile": "bigblackpic.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
