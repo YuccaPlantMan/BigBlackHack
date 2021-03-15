@@ -1,33 +1,30 @@
 package me.ryseyucca.bigblackhack.client.modules.render;
 
+import org.lwjgl.input.Keyboard;
+
 import me.ryseyucca.bigblackhack.BigBlackHack;
+import me.ryseyucca.bigblackhack.client.modules.Category;
 import me.ryseyucca.bigblackhack.client.modules.Module;
+
 
 public class FullBright extends Module {
 	public FullBright() {
-		// i will fill this out when we have a working module system
+		super ("FullBright", "No more torches bby", Keyboard.KEY_NONE , Category.RENDER);
+		this.setKey(Keyboard.KEY_M);
 	}
-	float gamBamEZ;
+	float oldGamma;
 	
 	@Override
-	public void onForever() {
-		gamBamEZ = mc.gameSettings.gammaSetting - 10;
-		this.mc.gameSettings.gameSetting = 1000.0F;
-	}
-	
-	/* @Override
 	public void onEnable() {
-		gamBamEZ = mc.gameSettings.gammaSetting - 10;
-		this.mc.gameSettings.gameSetting = 1000.0F;
+		oldGamma = mc.gameSettings.gammaSetting;
+		this.mc.gameSettings.gammaSetting = 1000.0F;
 		
-	} i will re-enable this once we have working module system :)
+	}
 	
 	@Override
 	public void onDisable() {
-		//super.onDisable();
-		
-		this.mc.gameSetttings.gammaSetting = gamBamEZ;
+		this.mc.gameSettings.gammaSetting = oldGamma;
 		mc.entityRenderer.updateRenderer();
-	} */
+	}
  
 }

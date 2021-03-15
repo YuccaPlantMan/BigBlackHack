@@ -3,7 +3,10 @@ package me.ryseyucca.bigblackhack.client.modules.nonblatant;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
 
+import org.lwjgl.input.Keyboard;
+
 import me.ryseyucca.bigblackhack.client.mixin.PropertyManger.DoubleProperty;
+import me.ryseyucca.bigblackhack.client.modules.Category;
 import me.ryseyucca.bigblackhack.client.modules.Module;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -11,6 +14,10 @@ import net.minecraft.client.Minecraft;
 
 
 public class TriggerBot extends Module {
+	public TriggerBot() {
+		super ("TriggerBot", "If you are aiming at an enemy you will hit automatically", Keyboard.KEY_NONE , Category.NONBLATANT);
+		this.setKey(Keyboard.KEY_B);
+	}
 	/*public DoubleProperty ticks = new DoubleProperty (this, "Ticks existed", 30, 0, 100);
 	/* public NumberSetting rangeOfEntity = new NumberSetting("moonke", this, 4, 1, 6, 0.5);
 	boolean isEntityCloseEnough = mc.player.getDistance(entity) <= rangeOfEntity.getValue();
